@@ -18,24 +18,24 @@ Here's some  use cases showing the options for compiling and
 formatting. Assumes you have both elm and elm-format in your
 path. *
 
->       --compile a file
->       $ ./go.sh -i src/hello.elm -c
->       File <src/hello.elm>
->       Success! Compiled 1 module.                                          
->       Status: format (0) compile (1)
+       --compile a file
+       $ ./go.sh -i src/hello.elm -c
+       File <src/hello.elm>
+       Success! Compiled 1 module.                                          
+       Status: format (0) compile (1)
 
->       -- format a file
->       $ ./go.sh -i src/hello.elm -f
->       File <src/hello.elm>
->       Processing file src/hello.elm
->       Status: format (1) compile (0)
+       -- format a file
+       $ ./go.sh -i src/hello.elm -f
+       File <src/hello.elm>
+       Processing file src/hello.elm
+       Status: format (1) compile (0)
 
->       -- compile then format
->       $ ./go.sh -i src/hello.elm -a
->       File <src/hello.elm>
->       Success! Compiled 1 module.                                          
->       Processing file src/hello.elm
->       Status: format (1) compile (1)
+       -- compile then format
+       $ ./go.sh -i src/hello.elm -a
+       File <src/hello.elm>
+       Success! Compiled 1 module.                                          
+       Processing file src/hello.elm
+       Status: format (1) compile (1)
 
 Have fun.
 
