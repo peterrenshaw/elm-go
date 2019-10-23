@@ -89,19 +89,19 @@ compile or format, compile and format in any order.
 here's some use cases showing the options for compiling and formatting
 
 >       --compile a file
->       $ ./go.sh -i src/hello.elm -c
+>       $ ./eg.sh -i src/hello.elm -c
 >       File <src/hello.elm>
 >       Success! Compiled 1 module.                                          
 >       Status: format (0) compile (1)
 
 >       -- format a file
->       $ ./go.sh -i src/hello.elm -f
+>       $ ./eg.sh -i src/hello.elm -f
 >       File <src/hello.elm>
 >       Processing file src/hello.elm
 >       Status: format (1) compile (0)
 
 >       -- compile then format
->       $ ./go.sh -i src/hello.elm -a
+>       $ ./eg.sh -i src/hello.elm -a
 >       File <src/hello.elm>
 >       Success! Compiled 1 module.                                          
 >       Processing file src/hello.elm

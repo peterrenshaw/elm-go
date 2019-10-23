@@ -19,19 +19,19 @@ formatting. Assumes you have both elm and elm-format in your
 path. *
 
        --compile a file
-       $ ./elm-go.sh -i src/hello.elm -c
+       $ ./eg.sh -i src/hello.elm -c
        File <src/hello.elm>
        Success! Compiled 1 module.                                          
        Status: format (0) compile (1)
 
        -- format a file
-       $ ./elm-go.sh -i src/hello.elm -f
+       $ ./eg.sh -i src/hello.elm -f
        File <src/hello.elm>
        Processing file src/hello.elm
        Status: format (1) compile (0)
 
        -- compile then format
-       $ ./elm-go.sh -i src/hello.elm -a
+       $ ./eg.sh -i src/hello.elm -a
        File <src/hello.elm>
        Success! Compiled 1 module.                                          
        Processing file src/hello.elm
@@ -41,6 +41,7 @@ Have fun.
 
  
 2019OCT23
+* changing filenames
 * editing docs
 * github
 * tools, howto files 
