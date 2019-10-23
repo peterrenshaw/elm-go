@@ -1,13 +1,15 @@
 #!/bin/bash
 
 #=========
-# name: go.sh
+# name: elm-go.sh
 # date: 2019OCT23
 # desc: ELM compiler wrapper
 #       because I want to format and make without typing in the same
 #       paths all the time, I have a script to do this
 # todo
 #       * check elm / elm-format exist
+#
+# recs: bourne shell / bash
 #
 # opts: Compile and format
 #         -a
