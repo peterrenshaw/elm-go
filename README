@@ -6,6 +6,13 @@
  /_____/_/_/ /_/ /_/      \____/\____/ 
 
 
+Why doesn't the elm compiler have a formatter built-in like haskell?
+
+read <https://github.com/peterrenshaw/elm-go/blob/master/docs/HOWTO-improving-my-elm-tools.md>
+
+
+WORK FLOW 
+
 A work flow tool to use with the elm compiler. formatter and vim.
 Here's some  use cases showing the options for compiling and 
 formatting. Assumes you have both elm and elm-format in your
@@ -38,6 +45,7 @@ Want more detailed information? try reading:
 
  
 2019OCT23
+* editing docs
 * github
 * tools, howto files 
 * initial commit
