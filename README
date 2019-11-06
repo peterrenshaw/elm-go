@@ -19,26 +19,46 @@ formatting. Assumes you have both elm and elm-format in your
 path. *
 
        --compile a file
-       $ ./eg.sh -i src/hello.elm -c
+       $ ./g.sh -i src/hello.elm -c
        File <src/hello.elm>
        Success! Compiled 1 module.                                          
        Status: format (0) compile (1)
 
        -- format a file
-       $ ./eg.sh -i src/hello.elm -f
+       $ ./g.sh -i src/hello.elm -f
        File <src/hello.elm>
        Processing file src/hello.elm
        Status: format (1) compile (0)
 
        -- compile then format
-       $ ./eg.sh -i src/hello.elm -a
+       $ ./g.sh -i src/hello.elm -a
        File <src/hello.elm>
        Success! Compiled 1 module.                                          
        Processing file src/hello.elm
        Status: format (1) compile (1)
 
+       -- help
+       $ ./g.sh -h
+       (C)ompile a file
+       $ ./g.sh.sh -i src/hello.elm -c
+
+       (F)ormat a file
+       $ ./g.sh.sh -i src/hello.elm -f
+
+       (A) Compile then Format
+       $ ./g.sh.sh -i src/hello.elm -a
+
+       (H)elp show help message
+       $ ./g.sh -h
+
+
 Have fun.
 
+2019NOV06
+* added help
+- cause I forget the options
+* removed annoying compile info if no options supplied
+* modified file help messages
  
 2019OCT23
 * changing filenames

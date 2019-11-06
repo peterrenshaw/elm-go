@@ -1,14 +1,17 @@
 #!/bin/bash
 
 #=========
-# name: elm-go.sh
-# date: 2019OCT23
+# name: g.sh / eg.sh / elm-go.sh
+# date: 2019NOV06
+#       2019OCT23
 # desc: ELM compiler wrapper
 #       because I want to format and make without typing in the same
-#       paths all the time, I have a script to do this
+#       paths all the time, I have a script to do this. 
 # todo
 #       * check elm / elm-format exist
-#
+# done  
+#       2019NOV06
+#       * help options
 # recs: bourne shell / bash
 #
 # opts: Compile and format
@@ -19,34 +22,42 @@
 #         -c
 #       Input filename
 #         -i
+#       Help
+#         -h 
+#    
 # usge: 
 #      
 #       --compile a file
-#       $ ./eg.sh -i src/hello.elm -c
+#       $ ./g.sh -i src/hello.elm -c
 #       File <src/hello.elm>
 #       Success! Compiled 1 module.                                          
 #       Status: format (0) compile (1)
 #
 #       -- format a file
-#       $ ./eg.sh -i src/hello.elm -f
+#       $ ./g.sh -i src/hello.elm -f
 #       File <src/hello.elm>
 #       Processing file src/hello.elm
 #       Status: format (1) compile (0)
 #
 #       -- compile then format
-#       $ ./eg.sh -i src/hello.elm -a
+#       $ ./g.sh -i src/hello.elm -a
 #       File <src/hello.elm>
 #       Success! Compiled 1 module.                                          
 #       Processing file src/hello.elm
 #       Status: format (1) compile (1)
+#
+#       -- show help message 
+#       $ ./g.sh -h
 #=========
 
 
 {
   # declare
+  fn='g.sh'     # sick of hardcoded filename
   format=0
   compile=0
   filename=""
+  help=0
 
   # process file options supplied
   #   -i input source file
@@ -55,8 +66,26 @@
   #   -f format only
   #   -c compile only
   #
-  while getopts  "afci:" flag
+  while getopts  "hafci:" flag
   do
+    # who help information
+    if [ $flag == 'h' ]
+    then
+      help=1
+      echo "    (C)ompile a file"
+      echo "    $ ./$fn.sh -i src/hello.elm -c"
+      echo ""
+      echo "    (F)ormat a file"
+      echo "    $ ./$fn.sh -i src/hello.elm -f"
+      echo ""
+      echo "    (A) Compile then Format"
+      echo "    $ ./$fn.sh -i src/hello.elm -a"
+      echo ""
+      echo "    (H)elp show Help message" 
+      echo "    $ ./g.sh -h"
+
+    fi
+
     # get the filepathname 
     if [ $flag = 'i' ] 
     then
@@ -98,8 +127,11 @@
   done
 
   # show status of args
-  echo "Status: format ($format) compile ($compile)"
-  echo ""
+  if [ $help == 0 ]
+  then
+    echo "Status: format ($format) compile ($compile)"
+    echo ""
+  fi
 
 } >&2
 
